@@ -1,0 +1,1098 @@
+---
+title: "DISTRIBUCIONES DE FRECUENCIAS"
+subtitle: "Taller dos – Estadística"
+author:
+  - name: "Judy Esperanza Jiménez Rodríguez"
+   
+  - name: "David Santiago Rivas Portela"
+    
+date: today
+lang: es
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "Contenido del trabajo"
+    resources:
+      - logo_ESAP.png
+    number-sections: false
+    theme: cosmo
+    fontsize: 12pt
+    code-fold: true
+    code-summary: "Mostrar u ocultar código"
+    embed-resources: true
+    smooth-scroll: true
+execute:
+  echo: false
+  warning: false
+  message: false
+  error: false
+---
+
+<p style="text-align: right; margin: 25px 0;">
+  <img 
+    src="C:/Users/Rojas/OneDrive/Desktop/taller 2 estadistica 1/taller 2/logo_ESAP.png"
+    alt="Logo de la Escuela Superior de Administración Pública"
+    width="150">
+</p>
+
+  
+<style>
+:root {
+  --azul-esap: #12345A;
+  --azul-claro: #EAF1F8;
+  --dorado: #D5A52A;
+}
+body { line-height: 1.7; color: #263445; }
+h1, h2, h3 { color: var(--azul-esap); }
+h1 { border-bottom: 3px solid var(--dorado); padding-bottom: 10px; }
+h2 { border-left: 5px solid var(--dorado); padding-left: 12px; margin-top: 30px; }
+.portada {
+  background: linear-gradient(135deg, #12345A, #24527A);
+  color: white; padding: 38px 25px; border-radius: 12px;
+  text-align: center; margin: 25px 0 35px 0;
+}
+.portada h1 { color: white; border: none; }
+.portada h3 { color: #F2CF70; }
+.portada p { color: white; }
+.callout-esap {
+  background: var(--azul-claro); border-left: 5px solid var(--dorado);
+  padding: 15px 18px; border-radius: 6px; margin: 18px 0;
+}
+table { width: 100%; font-size: .94rem; }
+thead { background: #12345A; color: white; }
+tbody tr:nth-child(even) { background: #EDF3F8; }
+.figure { margin: 20px auto; }
+</style>
+
+::: {.portada}
+# DISTRIBUCIONES DE FRECUENCIAS
+
+### TALLER DOS – ESTADÍSTICA
+
+**Escuela Superior de Administración Pública – ESAP**
+
+**Presentado por:**
+
+Judy Esperanza Jiménez Rodríguez  
+David Santiago Rivas Portela
+:::
+
+# Presentación
+
+El propósito de este trabajo es comprender y aplicar las distribuciones de frecuencias como herramienta para organizar, resumir, representar e interpretar información estadística. Se integran los conceptos teóricos, las fórmulas y la clasificación de las variables con el análisis práctico de una base de datos de trabajadores.
+
+Las tablas permiten conocer cuántas observaciones corresponden a cada categoría o intervalo. Las gráficas facilitan identificar patrones, concentraciones y diferencias. En conjunto, estas herramientas convierten los datos en información útil para comprender las características de la población estudiada.
+
+# 1. Introducción
+
+La estadística descriptiva permite recolectar, organizar, presentar, interpretar y analizar datos para convertirlos en información útil. Una parte fundamental de este proceso es la organización de los datos, para lo cual se utilizan tablas de distribución de frecuencias y diferentes representaciones gráficas.
+
+Una tabla resume la información mediante frecuencias, mientras que una gráfica permite observarla de manera visual. La interpretación estadística relaciona ambos elementos y explica qué significan los resultados en el contexto del ejercicio.
+
+# 2. ¿Qué es una distribución de frecuencias?
+
+Una distribución de frecuencias es un método estadístico que permite resumir los datos de una variable, mostrando cuántas veces se repite cada valor o categoría.
+
+Una tabla estadística debe contener un título que identifique la información presentada, un cuerpo organizado en filas y columnas, los valores o categorías con sus frecuencias y, cuando corresponda, una nota que indique la fuente de los datos y las aclaraciones necesarias.
+
+# 3. Tipos de frecuencias
+
+3.1. Frecuencia absoluta $$fi$$
+
+Indica cuántas veces se repite un valor o categoría dentro del conjunto de datos. Por ejemplo, si 20 trabajadores pertenecen al sector salud, la frecuencia absoluta de esa categoría es 20.
+
+3.2. Frecuencia relativa $$hi$$
+
+Indica qué proporción representa la frecuencia absoluta respecto al total de observaciones.
+
+$$
+h_i = \frac{f_i}{n}
+$$
+
+Donde $$f_i$$ es la frecuencia absoluta y $$n$$ es el total de observaciones válidas.
+
+3.3. Frecuencia absoluta acumulada $$Fi$$
+
+Se obtiene sumando progresivamente las frecuencias absolutas. La última frecuencia acumulada debe ser igual al total de observaciones.
+
+ 3.4. Frecuencia relativa acumulada $$Hi$$
+
+Se obtiene sumando progresivamente las frecuencias relativas. La última frecuencia relativa acumulada debe ser igual a 1, equivalente al 100 %.
+
+ 3.5. Frecuencia porcentual
+
+Representa la frecuencia relativa expresada en porcentaje.
+
+$$
+Porcentaje = h_i \times 100
+$$
+
+3.6. Resumen de las frecuencias
+
+| Tipo | Significado | Resultado final esperado |
+|:---|:---|:---|
+| Absoluta (fi) | Número de veces que aparece un dato. | Total de observaciones (n) |
+| Relativa (hi) | Proporción de cada categoría. | 1 |
+| Absoluta acumulada (Fi) | Suma progresiva de las absolutas. | n |
+| Relativa acumulada (Hi) | Suma progresiva de las relativas. | 1 |
+| Porcentual | Frecuencia relativa multiplicada por 100. | 100 % |
+
+::: {.callout-esap}
+**Importante:** la frecuencia acumulada tiene sentido cuando las categorías o valores tienen un orden. Por eso, para una variable cualitativa nominal como el sector laboral, se presentan la frecuencia absoluta, relativa y porcentual, pero no se interpreta una acumulación. Las variables ordinales y cuantitativas sí permiten trabajar con frecuencias acumuladas.
+:::
+
+# 4. Clasificación de las variables estadísticas
+
+Las variables estadísticas representan características que pueden observarse o medirse en una población o muestra.
+
+ 4.1. Variables cualitativas
+
+Describen características o categorías y no representan cantidades numéricas sobre las que tenga sentido realizar operaciones aritméticas.
+
+- **Nominales:** sus categorías no tienen un orden natural. Ejemplo: sector laboral.
+- **Ordinales:** sus categorías tienen un orden o jerarquía. Ejemplo: nivel de satisfacción.
+
+ 4.2. Variables cuantitativas
+
+Representan cantidades numéricas y permiten realizar operaciones matemáticas.
+
+- **Discretas:** toman valores contables, generalmente enteros. Ejemplo: número de hijos.
+- **Continuas:** pueden tomar cualquier valor dentro de un intervalo, incluidos valores decimales. Ejemplo: salario medido con precisión.
+
+| Tipo de variable | Característica | Ejemplo |
+|:---|:---|:---|
+| Cualitativa nominal | Categorías sin orden | Sector laboral |
+| Cualitativa ordinal | Categorías con orden | Nivel de ingresos |
+| Cuantitativa discreta | Valores numéricos contables | Número de hijos |
+| Cuantitativa continua | Valores dentro de intervalos | Salario |
+
+# 5. Gráficas según el tipo de variable
+
+| Tipo de variable | Gráficas recomendadas |
+|:---|:---|
+| Cualitativa nominal | Diagrama de barras y diagrama circular o de sectores |
+| Cualitativa ordinal | Diagrama de barras respetando el orden de las categorías |
+| Cuantitativa discreta | Diagrama de bastones y diagrama escalonado |
+| Cuantitativa continua | Histograma, polígono de frecuencias y ojiva |
+
+# 6. Distribución de frecuencias para datos agrupados
+
+Cuando se trabaja con variables cuantitativas continuas o con muchos valores diferentes, los datos pueden organizarse mediante intervalos.
+
+ 6.1. Rango $$R$$
+
+Es la diferencia entre el valor máximo y el valor mínimo.
+
+$$
+R = X_{\max} - X_{\min}
+$$
+
+ 6.2. Número de intervalos $$m$$
+
+Se puede utilizar la regla de Sturges:
+
+$$
+m = 1 + 3.322\log_{10}(n)
+$$
+
+El resultado se aproxima a un número entero de intervalos.
+
+ 6.3. Amplitud $$a$$
+
+Indica el tamaño de cada intervalo.
+
+$$
+a = \frac{R}{m}
+$$
+
+ 6.4. Rango corregido $$Rc$$
+
+Es el rango ajustado para trabajar con intervalos de igual amplitud.
+
+$$
+R_c = a \times m
+$$
+
+6.5. Diferencia $$d$$
+
+Es la diferencia entre el rango corregido y el rango original.
+
+$$
+d = R_c - R
+$$
+
+Para distribuirla simétricamente, se puede dividir entre dos: se resta $$d/2$$ al mínimo y se suma $$d/2$$ al máximo.
+
+ 6.6. Marca de clase $$Mi$$
+
+Es el punto medio de cada intervalo.
+
+$$
+M_i = \frac{Límite\ inferior + Límite\ superior}{2}
+$$
+
+# 7. Preparación del entorno y lectura de datos
+
+En el ejercicio práctico se utiliza la base de datos `sector.xlsx`, que contiene registros de una encuesta a trabajadores. 
+
+ 7.1. Cargar las librerías
+
+```{r}
+paquetes <- c("tidyverse", "readxl", "knitr", "kableExtra", "janitor")
+
+instalados <- rownames(installed.packages())
+for (p in paquetes) {
+  if (!p %in% instalados) install.packages(p)
+}
+
+library(tidyverse)
+library(readxl)
+library(knitr)
+library(kableExtra)
+library(janitor)
+```
+
+ 7.2. Importar la base de datos
+
+```{r}
+
+# Buscar el archivo Excel
+rutas_posibles <- c("sector.xlsx", "datos/sector.xlsx")
+
+archivo <- rutas_posibles[file.exists(rutas_posibles)][1]
+
+if (length(archivo) == 0 || is.na(archivo)) {
+  stop("No se encuentra sector.xlsx.")
+}
+
+# Leer los datos
+datos <- readxl::read_excel(archivo, sheet = 1)
+
+# Organizar los nombres de las columnas
+datos <- janitor::clean_names(datos)
+
+# Mostrar información
+cat("Archivo leído:", normalizePath(archivo), "\n")
+cat("Número de registros:", nrow(datos), "\n")
+cat("Número de variables:", ncol(datos), "\n")
+
+# Mostrar los nombres de las columnas
+print(names(datos))
+```
+
+ 7.3. Conocer el conjunto de datos
+
+```{r}
+head(datos, 6)
+```
+
+```{r}
+glimpse(datos)
+```
+
+```{r}
+names(datos)
+```
+
+ 7.4. Verificar las diez variables
+
+```{r}
+variables_esperadas <- c(
+  "sector_laboral",
+  "nivel_ingresos",
+  "satisfaccion_servicio",
+  "frecuencia_participacion",
+  "anos_experiencia",
+  "numero_hijos",
+  "salario",
+  "satisfaccion_laboral",
+  "edad",
+  "participacion_programas"
+)
+
+faltantes <- setdiff(variables_esperadas, names(datos))
+
+if (length(faltantes) > 0) {
+  stop(
+    paste0(
+      "No se encontraron estas columnas: ",
+      paste(faltantes, collapse = ", "),
+      ".\\n\\nColumnas que R sí encontró en el archivo: ",
+      paste(names(datos), collapse = ", "),
+      ".\\n\\nVerifique que RStudio esté leyendo el archivo sector.xlsx ",
+      "correcto y que esté en la misma carpeta que index.qmd."
+    )
+  )
+}
+
+cat("Verificación exitosa: las diez variables esperadas están disponibles.\\n")
+cat("Total de registros:", nrow(datos), "\\n")
+```
+
+
+# 8. Descripción general y diccionario de variables
+
+Para el análisis se consideran diez variables relacionadas con el sector laboral, los ingresos, la satisfacción, la experiencia, la edad y la participación.
+
+| Variable | Descripción | Clasificación |
+|:---|:---|:---|
+| Sector laboral | Área o sector al que pertenece la persona. | Cualitativa nominal |
+| Nivel de ingresos | Categoría del nivel de ingresos. | Cualitativa ordinal |
+| Satisfacción del servicio | Percepción del servicio recibido. | Cualitativa ordinal |
+| Frecuencia de participación | Frecuencia con la que participa la persona. | Cualitativa ordinal |
+| Años de experiencia | Años de experiencia laboral. | Cuantitativa discreta |
+| Número de hijos | Cantidad de hijos. | Cuantitativa discreta |
+| Salario | Valor del ingreso salarial. | Cuantitativa continua, agrupada |
+| Satisfacción laboral | Medición numérica de satisfacción laboral. | Cuantitativa, agrupada |
+| Edad | Edad de las personas encuestadas, registrada en años cumplidos. | Cuantitativa discreta |
+| Participación en programas | Proporción de participación, registrada como valor decimal entre 0 y 1. | Cuantitativa continua |
+
+La clasificación se establece de acuerdo con la forma en que aparecen los datos en el archivo: la edad está registrada en años cumplidos, mientras que satisfacción laboral y participación en programas contienen valores decimales.
+
+```{r}
+diccionario <- tibble(
+  Variable = c(
+    "Sector laboral", "Nivel de ingresos", "Satisfacción del servicio",
+    "Frecuencia de participación", "Años de experiencia", "Número de hijos",
+    "Salario", "Satisfacción laboral", "Edad", "Participación en programas"
+  ),
+  Nombre_en_base = variables_esperadas,
+  Clasificacion = c(
+    "Cualitativa nominal", "Cualitativa ordinal", "Cualitativa ordinal",
+    "Cualitativa ordinal", "Cuantitativa discreta", "Cuantitativa discreta",
+    "Cuantitativa continua", "Cuantitativa continua",
+    "Cuantitativa discreta", "Cuantitativa continua"
+  )
+)
+
+kable(diccionario, caption = "Diccionario de las diez variables", align = "l") |>
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = TRUE
+  )
+```
+
+ 8.1. Dimensiones y valores faltantes
+
+```{r}
+resumen_base <- tibble(
+  Indicador = c(
+    "Número de registros",
+    "Número de variables",
+    "Celdas con información",
+    "Celdas vacías"
+  ),
+  Resultado = c(
+    nrow(datos),
+    ncol(datos),
+    sum(!is.na(datos)),
+    sum(is.na(datos))
+  )
+)
+
+kable(resumen_base, caption = "Resumen general de la base de datos") |>
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    full_width = FALSE
+  )
+```
+
+**Interpretación:** el número de registros indica cuántas personas u observaciones contiene la base. El número de variables muestra cuántas características se estudian. Las celdas vacías permiten identificar datos faltantes que deben tenerse en cuenta al interpretar los resultados.
+
+# 9. Funciones para construir las tablas de frecuencias
+
+Las funciones siguientes automatizan los cálculos para que todas las tablas utilicen el mismo procedimiento y formato.
+
+ 9.1. Función para presentar tablas
+
+```{r}
+mostrar_tabla <- function(tabla, titulo) {
+  knitr::kable(
+    tabla,
+    caption = titulo,
+    align = "c",
+    digits = 3,
+    format.args = list(big.mark = ".", decimal.mark = ",")
+  ) |>
+    kableExtra::kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position = "center"
+    )
+}
+```
+
+ 9.2. Función para variables cualitativas
+
+La función conserva el orden indicado para las categorías ordinales. Si existen categorías en los datos que no estén incluidas en el orden sugerido, las añade al final para no perder observaciones.
+
+```{r}
+tabla_cualitativa <- function(x, orden = NULL, acumulada = FALSE) {
+  x <- trimws(as.character(x))
+  x <- x[!is.na(x) & x != ""]
+
+  if (length(x) == 0) stop("La variable no contiene datos válidos.")
+
+  observadas <- unique(x)
+
+  if (is.null(orden)) {
+    categorias <- sort(observadas)
+  } else {
+    categorias <- c(
+      orden[orden %in% observadas],
+      sort(setdiff(observadas, orden))
+    )
+  }
+
+  tabla <- tibble(Categoria = factor(x, levels = categorias)) |>
+    count(Categoria, .drop = FALSE, name = "fi") |>
+    mutate(
+      hi = fi / sum(fi),
+      Porcentaje = hi * 100
+    )
+
+  if (acumulada) {
+    tabla <- tabla |>
+      mutate(
+        Fi = cumsum(fi),
+        Hi = cumsum(hi),
+        Porcentaje_acumulado = cumsum(Porcentaje)
+      )
+  }
+
+  tabla |>
+    mutate(Categoria = as.character(Categoria))
+}
+```
+
+ 9.3. Función para variables cuantitativas discretas
+
+```{r}
+tabla_discreta <- function(x) {
+  x <- x[!is.na(x)]
+
+  if (length(x) == 0) stop("La variable no contiene datos válidos.")
+
+  tibble(Valor = x) |>
+    count(Valor, name = "fi") |>
+    arrange(Valor) |>
+    mutate(
+      hi = fi / sum(fi),
+      Porcentaje = hi * 100,
+      Fi = cumsum(fi),
+      Hi = cumsum(hi),
+      Porcentaje_acumulado = cumsum(Porcentaje)
+    )
+}
+```
+
+ 9.4. Función para variables cuantitativas agrupadas
+
+La función calcula el rango, el número de intervalos según Sturges, la amplitud, los límites, la marca de clase y las frecuencias.
+
+```{r}
+tabla_intervalos <- function(x, numero_clases = NULL) {
+  x <- x[!is.na(x) & is.finite(x)]
+
+  if (length(x) == 0) stop("La variable no contiene datos numéricos válidos.")
+
+  n <- length(x)
+  minimo <- min(x)
+  maximo <- max(x)
+
+  if (minimo == maximo) {
+    return(list(
+      tabla = tibble(
+        Intervalo = paste0(minimo, " a ", maximo),
+        Limite_inferior = minimo,
+        Limite_superior = maximo,
+        Marca_clase = minimo,
+        fi = n,
+        hi = 1,
+        Porcentaje = 100,
+        Fi = n,
+        Hi = 1
+      ),
+      resumen = tibble(
+        n = n, Minimo = minimo, Maximo = maximo,
+        Rango = 0, Intervalos = 1, Amplitud = 0,
+        Rango_corregido = 0, Diferencia = 0
+      )
+    ))
+  }
+
+  R <- maximo - minimo
+
+  if (is.null(numero_clases)) {
+    numero_clases <- max(1, round(1 + 3.322 * log10(n)))
+  }
+
+  amplitud <- ceiling((R / numero_clases) * 100) / 100
+  if (amplitud <= 0) amplitud <- R
+
+  rango_corregido <- amplitud * numero_clases
+  diferencia <- rango_corregido - R
+
+  limite_inicial <- minimo - diferencia / 2
+  limite_final <- limite_inicial + rango_corregido
+  cortes <- seq(limite_inicial, limite_final, length.out = numero_clases + 1)
+
+  grupos <- cut(
+    x,
+    breaks = cortes,
+    include.lowest = TRUE,
+    right = TRUE,
+    dig.lab = 10
+  )
+
+  tabla <- tibble(Grupo = grupos) |>
+    count(Grupo, .drop = FALSE, name = "fi") |>
+    mutate(
+      Limite_inferior = cortes[-length(cortes)],
+      Limite_superior = cortes[-1],
+      Marca_clase = (Limite_inferior + Limite_superior) / 2,
+      hi = fi / sum(fi),
+      Porcentaje = hi * 100,
+      Fi = cumsum(fi),
+      Hi = cumsum(hi),
+      Intervalo = as.character(Grupo)
+    ) |>
+    select(
+      Intervalo, Limite_inferior, Limite_superior,
+      Marca_clase, fi, hi, Porcentaje, Fi, Hi
+    )
+
+  resumen <- tibble(
+    n = n,
+    Minimo = minimo,
+    Maximo = maximo,
+    Rango = R,
+    Intervalos = numero_clases,
+    Amplitud = amplitud,
+    Rango_corregido = rango_corregido,
+    Diferencia = diferencia
+  )
+
+  list(tabla = tabla, resumen = resumen)
+}
+```
+
+ 9.5. Función para interpretar una tabla
+
+```{r}
+interpretar_frecuencias <- function(tabla, nombre, columna = "Categoria") {
+  fila_maxima <- tabla[which.max(tabla$fi), , drop = FALSE]
+  categoria_maxima <- as.character(fila_maxima[[columna]][1])
+  frecuencia_maxima <- fila_maxima$fi[1]
+  porcentaje_maximo <- fila_maxima$Porcentaje[1]
+
+  cat(
+    "En la variable", nombre,
+    "la categoría o intervalo con mayor frecuencia es",
+    categoria_maxima, "."
+  )
+  cat(
+    " Registra", frecuencia_maxima,
+    "observaciones, equivalentes al",
+    round(porcentaje_maximo, 2), "% del total válido."
+  )
+}
+```
+
+# 10. Variables cualitativas
+
+Las variables cualitativas permiten estudiar características expresadas mediante categorías. Para las variables ordinales se respeta el orden de sus categorías.
+
+ 10.1. Sector laboral
+
+**Clasificación:** cualitativa nominal.
+
+La variable identifica el sector al que pertenece cada persona. Sus categorías no tienen un orden jerárquico, por lo que se presentan las frecuencias absoluta, relativa y porcentual, sin frecuencias acumuladas.
+
+```{r}
+tab_sector <- tabla_cualitativa(datos$sector_laboral)
+
+mostrar_tabla(tab_sector, "Distribución de frecuencias: sector laboral")
+```
+
+**Interpretación:** la tabla permite identificar cuántas personas pertenecen a cada sector. La categoría con mayor frecuencia representa el sector más frecuente dentro de la muestra.
+
+```{r}
+ggplot(tab_sector, aes(x = reorder(Categoria, -fi), y = fi)) +
+  geom_col(fill = "#1E4D78", width = 0.68) +
+  geom_text(aes(label = fi), vjust = -0.45, fontface = "bold") +
+  labs(
+    title = "Personas por sector laboral",
+    subtitle = "Frecuencia absoluta",
+    x = "Sector laboral",
+    y = "Número de personas"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", color = "#12345A"),
+    axis.text.x = element_text(angle = 20, hjust = 1)
+  )
+```
+
+**Interpretación de la gráfica:** las barras más altas muestran los sectores con mayor cantidad de personas. La comparación visual permite reconocer qué sectores tienen mayor y menor representación.
+
+```{r}
+ggplot(tab_sector, aes(x = "", y = fi, fill = Categoria)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  geom_text(
+    aes(label = paste0(round(Porcentaje, 1), "%")),
+    position = position_stack(vjust = 0.5),
+    color = "white",
+    fontface = "bold",
+    size = 3.5
+  ) +
+  labs(
+    title = "Participación porcentual por sector laboral",
+    fill = "Sector"
+  ) +
+  theme_void()
+```
+
+**Interpretación del gráfico circular:** cada segmento representa la proporción de personas de un sector respecto al total. Los segmentos más grandes corresponden a los sectores con mayor participación.
+
+ 10.2. Nivel de ingresos
+
+**Clasificación:** cualitativa ordinal.
+
+Las categorías se organizan desde el nivel más bajo hasta el más alto. Se utiliza el orden Baja, Media y Alta cuando esas son las etiquetas presentes en el archivo; las categorías diferentes que aparezcan se conservan al final de la tabla.
+
+```{r}
+tab_nivel <- tabla_cualitativa(
+  datos$nivel_ingresos,
+  orden = c("Baja", "Media", "Alta"),
+  acumulada = TRUE
+)
+
+mostrar_tabla(tab_nivel, "Distribución de frecuencias: nivel de ingresos")
+```
+
+**Interpretación:** la tabla permite reconocer en qué nivel de ingresos se concentra la mayor cantidad de personas y qué proporción se encuentra en cada categoría. La frecuencia acumulada permite sumar progresivamente las categorías respetando su orden.
+
+```{r}
+ggplot(tab_nivel, aes(x = factor(Categoria, levels = tab_nivel$Categoria), y = fi)) +
+  geom_col(fill = "#C69B3C", width = 0.65) +
+  geom_text(aes(label = fi), vjust = -0.45, fontface = "bold") +
+  labs(
+    title = "Distribución del nivel de ingresos",
+    x = "Nivel de ingresos",
+    y = "Frecuencia absoluta"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación de la gráfica:** permite comparar la cantidad de personas en cada nivel de ingresos y observar cuál tiene mayor presencia.
+
+ 10.3. Satisfacción del servicio
+
+**Clasificación:** cualitativa ordinal.
+
+Las categorías se organizan desde la mayor insatisfacción hasta la mayor satisfacción. Si las etiquetas reales tienen una escritura diferente, el código conserva esas categorías para que no se pierdan registros.
+
+```{r}
+orden_satisfaccion <- c(
+  "Muy Insatisfecho",
+  "Insatisfecho",
+  "Neutral",
+  "Satisfecho",
+  "Muy Satisfecho"
+)
+
+tab_satisfaccion <- tabla_cualitativa(
+  datos$satisfaccion_servicio,
+  orden = orden_satisfaccion,
+  acumulada = TRUE
+)
+
+mostrar_tabla(tab_satisfaccion, "Distribución de frecuencias: satisfacción del servicio")
+```
+
+**Interpretación:** la tabla permite conocer la percepción de las personas sobre el servicio recibido. Una mayor frecuencia en las categorías positivas indica una mayor concentración de respuestas favorables; una mayor frecuencia en las negativas puede señalar aspectos por mejorar.
+
+```{r}
+ggplot(
+  tab_satisfaccion,
+  aes(x = factor(Categoria, levels = tab_satisfaccion$Categoria), y = fi)
+) +
+  geom_col(fill = "#1E4D78", width = 0.65) +
+  geom_text(aes(label = fi), vjust = -0.45, fontface = "bold") +
+  labs(
+    title = "Nivel de satisfacción con el servicio",
+    x = "Nivel de satisfacción",
+    y = "Frecuencia absoluta"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 15, hjust = 1))
+```
+
+**Interpretación de la gráfica:** las barras permiten identificar las categorías más frecuentes y comparar visualmente las respuestas positivas, neutrales y negativas.
+
+ 10.4. Frecuencia de participación
+
+**Clasificación:** cualitativa ordinal.
+
+Esta variable permite estudiar con qué frecuencia participan las personas en actividades o procesos. Se propone un orden desde nunca hasta siempre, conservando cualquier otra categoría que exista en el archivo.
+
+```{r}
+orden_participacion <- c(
+  "Nunca",
+  "Rara vez",
+  "A veces",
+  "Frecuentemente",
+  "Siempre"
+)
+
+tab_participacion <- tabla_cualitativa(
+  datos$frecuencia_participacion,
+  orden = orden_participacion,
+  acumulada = TRUE
+)
+
+mostrar_tabla(tab_participacion, "Distribución de frecuencias: frecuencia de participación")
+```
+
+**Interpretación:** la tabla permite conocer si la participación es habitual, ocasional o poco frecuente y qué porcentaje representa cada respuesta.
+
+```{r}
+ggplot(
+  tab_participacion,
+  aes(x = factor(Categoria, levels = tab_participacion$Categoria), y = fi)
+) +
+  geom_col(fill = "#C69B3C", width = 0.65) +
+  geom_text(aes(label = fi), vjust = -0.45, fontface = "bold") +
+  labs(
+    title = "Frecuencia de participación",
+    x = "Frecuencia declarada",
+    y = "Frecuencia absoluta"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 15, hjust = 1))
+```
+
+**Interpretación de la gráfica:** permite reconocer visualmente los hábitos de participación y comparar las categorías de menor y mayor frecuencia.
+
+# 11. Variables cuantitativas discretas
+
+Las variables cuantitativas discretas representan cantidades que pueden contarse y generalmente toman valores enteros.
+
+ 11.1. Años de experiencia
+
+**Clasificación:** cuantitativa discreta.
+
+Representa la cantidad de años de experiencia laboral de las personas encuestadas.
+
+```{r}
+tab_experiencia <- tabla_discreta(datos$anos_experiencia)
+mostrar_tabla(tab_experiencia, "Distribución de frecuencias: años de experiencia")
+```
+
+**Interpretación:** la tabla permite conocer cuántas personas tienen cada cantidad de años de experiencia. La frecuencia acumulada indica cuántas personas tienen un valor igual o inferior al valor correspondiente.
+
+```{r}
+ggplot(tab_experiencia, aes(x = Valor, y = fi)) +
+  geom_segment(
+    aes(xend = Valor, y = 0, yend = fi),
+    color = "#1E4D78",
+    linewidth = 1
+  ) +
+  geom_point(color = "#C69B3C", size = 3) +
+  labs(
+    title = "Diagrama de bastones: años de experiencia",
+    x = "Años de experiencia",
+    y = "Frecuencia absoluta"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del diagrama de bastones:** cada bastón representa un número de años de experiencia. Los bastones más altos corresponden a los valores más frecuentes.
+
+```{r}
+ggplot(tab_experiencia, aes(x = Valor, y = Fi)) +
+  geom_step(direction = "hv", linewidth = 1, color = "#1E4D78") +
+  geom_point(size = 2.5, color = "#C69B3C") +
+  labs(
+    title = "Diagrama escalonado: experiencia acumulada",
+    x = "Años de experiencia",
+    y = "Frecuencia absoluta acumulada"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del diagrama escalonado:** muestra cómo aumenta la cantidad acumulada de personas a medida que se consideran valores mayores de años de experiencia.
+
+ 11.2. Número de hijos
+
+**Clasificación:** cuantitativa discreta.
+
+Representa la cantidad de hijos de cada persona encuestada.
+
+```{r}
+tab_hijos <- tabla_discreta(datos$numero_hijos)
+mostrar_tabla(tab_hijos, "Distribución de frecuencias: número de hijos")
+```
+
+**Interpretación:** la tabla permite conocer cuántas personas no tienen hijos y cuántas tienen uno, dos o más. La frecuencia acumulada indica cuántas personas tienen hasta una cantidad determinada de hijos.
+
+```{r}
+ggplot(tab_hijos, aes(x = factor(Valor), y = fi)) +
+  geom_col(fill = "#1E4D78", width = 0.65) +
+  geom_text(aes(label = fi), vjust = -0.45, fontface = "bold") +
+  labs(
+    title = "Distribución del número de hijos",
+    x = "Número de hijos",
+    y = "Frecuencia absoluta"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación de la gráfica:** permite identificar el número de hijos más frecuente y comparar las diferentes situaciones familiares presentes en la base.
+
+# 12. Variables cuantitativas agrupadas en intervalos
+
+Cuando una variable presenta muchos valores diferentes, se puede agrupar en intervalos. Esto facilita resumir la información e identificar los rangos con mayor concentración de observaciones.
+
+En cada caso se presenta la tabla de frecuencias y un histograma. El histograma permite observar la forma de la distribución y los intervalos con mayor frecuencia.
+
+ 12.1. Salario
+
+**Clasificación:** cuantitativa continua, según el planteamiento del ejercicio.
+
+```{r}
+res_salario <- tabla_intervalos(datos$salario)
+tab_salario <- res_salario$tabla
+
+mostrar_tabla(tab_salario, "Distribución agrupada de frecuencias: salario")
+```
+
+**Resumen de los cálculos para agrupar el salario:**
+
+```{r}
+mostrar_tabla(res_salario$resumen, "Cálculos de agrupación de la variable salario")
+```
+
+**Interpretación:** el intervalo con mayor frecuencia representa el rango salarial en el que se concentra la mayor cantidad de personas. Los intervalos menos frecuentes muestran rangos con menor representación.
+
+```{r}
+ggplot(datos |> filter(!is.na(salario)), aes(x = salario)) +
+  geom_histogram(
+    bins = max(1, round(1 + 3.322 * log10(sum(!is.na(datos$salario))))),
+    fill = "#1E4D78",
+    color = "white"
+  ) +
+  labs(
+    title = "Distribución de los salarios",
+    subtitle = "Histograma de frecuencias",
+    x = "Salario",
+    y = "Frecuencia"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del histograma:** las barras más altas representan los rangos salariales con más observaciones. La forma general permite observar si los salarios se concentran en ciertos intervalos o se distribuyen a lo largo de un rango amplio.
+
+ 12.2. Edad
+
+**Clasificación:** cuantitativa agrupada, de acuerdo con el planteamiento del ejercicio.
+
+```{r}
+res_edad <- tabla_intervalos(datos$edad)
+tab_edad <- res_edad$tabla
+
+mostrar_tabla(tab_edad, "Distribución agrupada de frecuencias: edad")
+```
+
+```{r}
+mostrar_tabla(res_edad$resumen, "Cálculos de agrupación de la variable edad")
+```
+
+**Interpretación:** la tabla permite identificar los intervalos de edad con mayor y menor frecuencia, así como la distribución acumulada de las personas.
+
+```{r}
+ggplot(datos |> filter(!is.na(edad)), aes(x = edad)) +
+  geom_histogram(
+    bins = max(1, round(1 + 3.322 * log10(sum(!is.na(datos$edad))))),
+    fill = "#C69B3C",
+    color = "white"
+  ) +
+  labs(
+    title = "Distribución de las edades",
+    subtitle = "Histograma de frecuencias",
+    x = "Edad",
+    y = "Frecuencia"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del histograma:** permite observar los rangos de edad que concentran más personas y comparar la frecuencia de los diferentes intervalos.
+
+ 12.3. Satisfacción laboral
+
+**Clasificación:** variable numérica agrupada, según el planteamiento de la base de datos. Es diferente de la variable cualitativa `satisfaccion_servicio`.
+
+```{r}
+res_satisfaccion_laboral <- tabla_intervalos(datos$satisfaccion_laboral)
+tab_satisfaccion_laboral <- res_satisfaccion_laboral$tabla
+
+mostrar_tabla(
+  tab_satisfaccion_laboral,
+  "Distribución agrupada: satisfacción laboral"
+)
+```
+
+```{r}
+mostrar_tabla(
+  res_satisfaccion_laboral$resumen,
+  "Cálculos de agrupación: satisfacción laboral"
+)
+```
+
+**Interpretación:** la tabla permite observar en qué intervalos se concentran los valores numéricos de satisfacción laboral y cuáles presentan menor frecuencia.
+
+```{r}
+ggplot(
+  datos |> filter(!is.na(satisfaccion_laboral)),
+  aes(x = satisfaccion_laboral)
+) +
+  geom_histogram(
+    bins = max(1, round(1 + 3.322 * log10(sum(!is.na(datos$satisfaccion_laboral))))),
+    fill = "#1E4D78",
+    color = "white"
+  ) +
+  labs(
+    title = "Distribución de la satisfacción laboral",
+    x = "Valor de satisfacción laboral",
+    y = "Frecuencia"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del histograma:** permite visualizar la concentración de los valores numéricos y reconocer los intervalos que presentan mayor frecuencia.
+
+ 12.4. Participación en programas
+
+**Clasificación:** variable numérica agrupada, según el planteamiento de la base. Es diferente de la variable cualitativa `frecuencia_participacion`.
+
+```{r}
+res_programas <- tabla_intervalos(datos$participacion_programas)
+tab_programas <- res_programas$tabla
+
+mostrar_tabla(
+  tab_programas,
+  "Distribución agrupada: participación en programas"
+)
+```
+
+```{r}
+mostrar_tabla(
+  res_programas$resumen,
+  "Cálculos de agrupación: participación en programas"
+)
+```
+
+**Interpretación:** la tabla permite identificar los intervalos con mayor concentración de valores relacionados con la participación en programas.
+
+```{r}
+ggplot(
+  datos |> filter(!is.na(participacion_programas)),
+  aes(x = participacion_programas)
+) +
+  geom_histogram(
+    bins = max(1, round(1 + 3.322 * log10(sum(!is.na(datos$participacion_programas))))),
+    fill = "#C69B3C",
+    color = "white"
+  ) +
+  labs(
+    title = "Distribución de la participación en programas",
+    x = "Valor de participación en programas",
+    y = "Frecuencia"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+**Interpretación del histograma:** permite observar en qué rangos se concentran los valores y comparar la frecuencia de los distintos intervalos.
+
+# 13. Comprobación de las frecuencias
+
+La suma de las frecuencias absolutas debe ser igual al número de observaciones válidas de cada variable. Esta comprobación permite detectar errores en la construcción de las tablas.
+
+```{r}
+comprobacion <- tibble(
+  Variable = c(
+    "Sector laboral",
+    "Nivel de ingresos",
+    "Satisfacción del servicio",
+    "Frecuencia de participación",
+    "Años de experiencia",
+    "Número de hijos",
+    "Salario",
+    "Edad",
+    "Satisfacción laboral",
+    "Participación en programas"
+  ),
+  Observaciones_validas = c(
+    sum(!is.na(datos$sector_laboral) & trimws(as.character(datos$sector_laboral)) != ""),
+    sum(!is.na(datos$nivel_ingresos) & trimws(as.character(datos$nivel_ingresos)) != ""),
+    sum(!is.na(datos$satisfaccion_servicio) & trimws(as.character(datos$satisfaccion_servicio)) != ""),
+    sum(!is.na(datos$frecuencia_participacion) & trimws(as.character(datos$frecuencia_participacion)) != ""),
+    sum(!is.na(datos$anos_experiencia)),
+    sum(!is.na(datos$numero_hijos)),
+    sum(!is.na(datos$salario)),
+    sum(!is.na(datos$edad)),
+    sum(!is.na(datos$satisfaccion_laboral)),
+    sum(!is.na(datos$participacion_programas))
+  ),
+  Suma_frecuencias = c(
+    sum(tab_sector$fi),
+    sum(tab_nivel$fi),
+    sum(tab_satisfaccion$fi),
+    sum(tab_participacion$fi),
+    sum(tab_experiencia$fi),
+    sum(tab_hijos$fi),
+    sum(tab_salario$fi),
+    sum(tab_edad$fi),
+    sum(tab_satisfaccion_laboral$fi),
+    sum(tab_programas$fi)
+  )
+) |>
+  mutate(
+    Diferencia = Observaciones_validas - Suma_frecuencias,
+    Verificacion = if_else(Diferencia == 0, "Correcta", "Revisar")
+  )
+
+mostrar_tabla(comprobacion, "Verificación de los totales de frecuencia")
+```
+
+**Interpretación:** cuando la verificación aparece como correcta, significa que la suma de las frecuencias absolutas coincide con el número de observaciones válidas de la variable. Si aparece “Revisar”, se debe comprobar el tratamiento de los datos faltantes o las categorías.
+
+# 14. Conclusiones
+
+El desarrollo de este trabajo permitió comprender la importancia de las distribuciones de frecuencias como herramienta para organizar, resumir y analizar información estadística.
+
+A través de las variables cualitativas se estudió la distribución de las personas según características como el sector laboral, el nivel de ingresos, la satisfacción con el servicio y la frecuencia de participación. Estas variables permiten identificar categorías frecuentes y comparar la composición de la población.
+
+Las variables cuantitativas discretas, como los años de experiencia y el número de hijos, permitieron estudiar cantidades contables. Por su parte, las variables numéricas agrupadas facilitaron resumir datos con diferentes valores mediante intervalos.
+
+Las tablas y las gráficas se complementan: las tablas muestran los valores exactos de las frecuencias, mientras que las gráficas permiten observar patrones y concentraciones de manera visual. La interpretación explica qué significan esos resultados dentro del contexto del ejercicio.
+
+Finalmente, la comprobación de las frecuencias permite verificar que las observaciones válidas hayan sido contabilizadas correctamente. De esta manera, el trabajo demuestra que las distribuciones de frecuencias son una herramienta útil para transformar datos en información organizada y comprensible.
+
+# 15. Bibliografía y recursos de consulta
+
+- Material de clase y orientaciones académicas de la asignatura de Estadística.
+- R Project: https://www.r-project.org/
+- Posit / RStudio: https://posit.co/
+- Quarto: https://quarto.org/
+- Tidyverse: https://www.tidyverse.org/
+
+---
+
+<div style="text-align:center; padding:1.5rem; color:#526579; border-top:3px solid #D5A52A; margin-top:2rem;">
+  <strong>ESCUELA SUPERIOR DE ADMINISTRACIÓN PÚBLICA – ESAP</strong><br>
+  Taller dos · Distribuciones de frecuencias
+</div>
